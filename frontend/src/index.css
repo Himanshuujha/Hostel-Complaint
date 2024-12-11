@@ -1,0 +1,206 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #1f2937;
+  border: 2px solid #4b5563;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #10b981;
+  border-color: #10b981;
+}
+
+input[type="checkbox"]:checked::after {
+  content: '';
+  position: absolute;
+  top: 46%;
+  left: 50%;
+  width: 0.5rem;
+  height: 1rem;
+  border: solid white;
+  border-width: 0 0.1rem 0.1rem 0;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+input:focus {
+  @apply outline-none;
+}
+
+.btn {
+  @apply bg-rose-500 text-white py-2 px-6 mt-4 rounded-full shadow-lg shadow-rose-200;
+}
+
+.card {
+  @apply bg-primaryBlack shadow-md rounded-md text-white;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&family=Lato:wght@400;700&family=Merriweather:wght@400;700&family=Playfair+Display:wght@400;700&family=Poppins:wght@400;700&family=Source+Sans+Pro:wght@400;700&family=Montserrat:wght@400;700&display=swap');
+
+.font-roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+.font-open-sans {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.font-merriweather {
+  font-family: 'Merriweather', serif;
+}
+
+/* calendar.css */
+.react-calendar {
+  background-color: #182736; /*  secondaryBlack color */
+  color: #FFFFFF; /* White text */
+  border: none;
+ 
+}
+
+.react-calendar__tile {
+  color: #9CA3AF; /* Gray-400 text */
+  background-color: none;
+  transform-style: none;
+}
+
+.react-calendar__tile--now {
+  background: none; /*  primaryGreen color */
+  color: white; /* Primary black text */
+  position: relative;
+}
+.react-calendar__tile--active {
+  background: none;
+}
+
+.react-calendar__tile--now::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 23px;
+  width: 4px;
+  height: 4px;
+  background-color: red; /* Red color for the active tile indicator */
+  border-radius: 0;
+}
+
+.homeSlider {
+  position: fixed;
+  top: 60%;
+  transform: translateY(-50%);
+}
+
+.slick-slide {
+  transition: transform 0.5s ease;
+}
+
+.slick-center .slide {
+  transform: scale(1.15); 
+}
+.slick-dots li button:before {
+  color: white  !important;
+  font-size: 6px !important;
+  opacity: 1 !important;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #10b981 !important ; 
+  font-size: 10px !important;
+  opacity: 1 !important; 
+}
+.bg-darkBlue {
+  background-color: #182736;
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s forwards;
+}
+
+.fade-out {
+  animation: fadeOut 0.5s forwards;
+}
+
+.triangle-up {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 7px solid #5CFF85;
+}
+
+.triangle-down-white {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 7px solid white;
+}
+
+.triangle-down-green {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 7px solid #5CFF85;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 3px; /* Chrome, Safari, and Opera */
+  height: 3px; /* Chrome, Safari, and Opera */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #0B1926; /* Track background */
+  /* border-radius: 10px; Rounded corners */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #BDBDBD80; /* Thumb background */
+  border-radius: 10px; /* Rounded corners */
+}
